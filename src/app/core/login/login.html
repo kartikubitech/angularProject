@@ -1,0 +1,92 @@
+<div class="min-h-screen flex items-center justify-center 
+            bg-gradient-to-br from-blue-400 via-cyan-700 to-teal-600 p-4 animate-fadeIn">
+
+  <div 
+    class="w-full max-w-md bg-white/10 backdrop-blur-2xl border border-white/20 
+           rounded-3xl p-10 shadow-[0_8px_40px_rgba(0,0,0,0.4)]
+           animate-scaleUp">
+
+    <!-- Title -->
+    <div class="text-center mb-8">
+      <h1 class="text-4xl font-extrabold text-white tracking-wide animate-softGlow">
+        Login
+      </h1>
+      <p class="text-white/70 mt-2">Enter your credentials</p>
+    </div>
+
+    <form class="space-y-7" >
+
+      <!-- EMAIL FIELD -->
+      <div class="relative group animate-slideLeft">
+        <input 
+          type="email"
+          
+           [field]="loginForm.email"
+          class="w-full p-3 pt-6 bg-white/10 text-white rounded-xl border border-white/30 outline-none
+                 transition-all placeholder-transparent
+                 focus:ring-2 focus:ring-cyan-300 focus:border-cyan-300
+                 group-hover:scale-[1.02] focus:shadow-[0_0_15px_#22d3ee]"
+          placeholder="Email"
+        />
+
+        <!-- Floating label -->
+        <label
+          class="absolute top-2 left-3 text-white/70 text-sm pointer-events-none transition-all
+                 group-focus-within:top-0 group-focus-within:text-xs group-focus-within:text-cyan-300">
+          Email Address
+        </label>
+      </div>
+
+
+      <!-- PASSWORD FIELD -->
+      <div class="relative group animate-slideRight">
+        <input 
+          type="password"
+        
+          [field]="loginForm.password"
+          class="w-full p-3 pt-6 bg-white/10 text-white rounded-xl border border-white/30 outline-none
+                 transition-all placeholder-transparent
+                 focus:ring-2 focus:ring-cyan-300 focus:border-cyan-300
+                 group-hover:scale-[1.02] focus:shadow-[0_0_15px_#22d3ee]"
+          placeholder="Password"
+        />
+
+        <!-- Floating label -->
+        <label
+          class="absolute top-2 left-3 text-white/70 text-sm pointer-events-none transition-all
+                 group-focus-within:top-0 group-focus-within:text-xs group-focus-within:text-cyan-300">
+          Password
+        </label>
+      </div>
+
+      <!-- Remember + Forgot -->
+      <div class="flex justify-between items-center text-white/80 text-sm">
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input type="checkbox" class="w-4 h-4 rounded accent-cyan-500" />
+          Remember me
+        </label>
+        <a href="#" class="hover:text-black underline">Forgot password?</a>
+      </div>
+
+      <!-- Login Button -->
+      <button
+        class="w-full bg-blue-300 text-teal-900 font-bold py-3 rounded-xl 
+               shadow-xl relative overflow-hidden
+               hover:bg-cyan-200 transition-all active:scale-95 animate-pulseSlow"
+               (click)="save()"
+      >
+        Login
+      </button>
+    </form>
+
+    <!-- Footer -->
+    <p class="text-center text-white/70 mt-6 text-sm">
+      Don't have an account? 
+  <button type="button" class="text-pink-700 underline font-medium" (click)="register()">Sign Up</button>
+    </p>
+
+  </div>
+</div>
+
+<!-- Custom Animations -->
+

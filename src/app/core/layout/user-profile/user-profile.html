@@ -1,0 +1,135 @@
+
+
+<!-- Sidebar -->
+
+
+<!-- Navbar -->
+<nav
+  [class.navbar-scrolled]="isScrolled"
+  class="bg-white sticky top-0 z-30 transition-all duration-300"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Mobile Menu Button -->
+      <button
+        (click)="openSidebar()"
+        [class.active]="isSidebarOpen"
+        class="hamburger md:hidden flex flex-col space-y-1.5 p-2"
+      >
+        <span class="block w-6 h-0.5 bg-gray-800"></span>
+        <span class="block w-6 h-0.5 bg-gray-800"></span>
+        <span class="block w-6 h-0.5 bg-gray-800"></span>
+      </button>
+
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="#" class="logo flex items-center space-x-2">
+          <div
+            class="w-10 h-10 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center"
+          >
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              ></path>
+            </svg>
+          </div>
+          <span
+            class="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
+          >
+            BrandName
+          </span>
+        </a>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Home</a>
+        <a href="#" class="nav-link text-gray-700 hover:text-purple-600 font-medium">About</a>
+
+        <!-- Dropdown -->
+        <div class="dropdown relative">
+          <button
+            class="nav-link text-gray-700 hover:text-purple-600 font-medium flex items-center"
+          >
+            Services
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+          <div
+            class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2"
+          >
+            <a
+              href="#"
+              class="block px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
+              >Web Design</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
+              >Development</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
+              >Marketing</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
+              >Consulting</a
+            >
+          </div>
+        </div>
+
+        <a href="#" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Portfolio</a>
+        <a href="#" class="nav-link text-gray-700 hover:text-purple-600 font-medium">Contact</a>
+      </div>
+
+      <!-- Desktop Buttons -->
+      <div class="hidden md:flex items-center space-x-4">
+        <button
+          class="btn-outline px-4 py-2 text-purple-600 font-medium border-2 border-purple-600 rounded-lg hover:bg-purple-600 hover:text-white"
+        >
+          Login
+        </button>
+        <button
+          class="btn-primary px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-lg"
+        >
+          Sign Up
+        </button>
+      </div>
+
+      <!-- Mobile placeholder -->
+      <div class="md:hidden w-10"></div>
+    </div>
+  </div>
+</nav>
+
+<!-- Demo Content -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+  <div class="text-center">
+    <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Welcome to Our Website</h1>
+    <p class="text-xl text-gray-600 mb-8">Built with Angular 19 & Tailwind CSS</p>
+    <div
+      class="h-96 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center"
+    >
+      <p class="text-gray-500">Sidebar slides in from the left</p>
+    </div>
+  </div>
+
+  <!-- More content -->
+  <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="h-64 bg-white rounded-xl shadow-lg"></div>
+    <div class="h-64 bg-white rounded-xl shadow-lg"></div>
+    <div class="h-64 bg-white rounded-xl shadow-lg"></div>
+  </div>
+</div>

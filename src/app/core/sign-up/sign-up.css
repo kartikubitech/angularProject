@@ -1,0 +1,67 @@
+ @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        /* Applied to the button on click/focus */
+        .bounce-animation-active:active, .bounce-animation-active:focus {
+            animation: bounce 0.5s ease-out; /* Reduced duration for a snappy click bounce */
+        }
+        /* Smooth transitions (applied via Tailwind transition classes where possible, but kept here for fallback/clarity) */
+        input, button {
+            transition: all 0.3s ease;
+        }
+        /* Active bounce effect (user requested bounce on click) */
+        input:active, button:active {
+            transform: scale(0.98);
+        }
+        /* Hover glow effect */
+        input:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        button:hover {
+            box-shadow: 0 20px 35px rgba(168, 85, 247, 0.4);
+            transform: translateY(-4px) scale(1.02); /* Adjusted scale slightly */
+        }
+        /* Focus ring effects (These classes are applied directly to the inputs below) */
+        .focus-purple:focus {
+            border-color: #a855f7;
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.2);
+        }
+        .focus-pink:focus {
+            border-color: #ec4899;
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.2);
+        }
+        .focus-blue:focus {
+            border-color: #3b82f6;
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+        }
+        .focus-indigo:focus {
+            border-color: #6366f1;
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+        }
+        /* Icon animations */
+        .input-group:hover svg {
+            color: #a855f7;
+            transform: scale(1.1);
+        }
+        svg {
+            transition: all 0.3s ease;
+        }
+        /* Card hover effect */
+        .card {
+            transition: all 0.5s ease;
+        }
+        .card:hover {
+            transform: scale(1.02);
+        }
+        /* Icon container hover */
+        .icon-container {
+            transition: all 0.3s ease;
+        }
+        .icon-container:hover {
+            transform: rotate(12deg) scale(1.1);
+        }  
